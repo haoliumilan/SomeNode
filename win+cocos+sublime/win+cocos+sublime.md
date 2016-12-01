@@ -25,28 +25,15 @@
 * 通过vs2015打开新创建的工程，编译运行，在工程目录下的`simulator/win32/`中生成.exe文件，项目开发的时候，sublime启动的就是这个可执行文件；
 
 ####sublime的代码跳转
-* 首先需要安装插件，下载地址<https://github.com/iTyran/quick-comminuty-dev/archive/master.zip>，这个是quick-community-dev是泰然网的quick社区版的sublime插件，通过简单的修改，我们一样可以使用；
+* 首先需要安装插件，下载地址<https://github.com/haoliumilan/quick-comminuty-dev/archive/master.zip>，这个是quick-community-dev是泰然网的quick社区版的sublime插件，通过简单的修改，我们一样可以使用；
 * 打开 Sublime Text 中依次选择 Preferences ==> Browse Packages... ，此时将进入到Sublime Text的 Packages 目录下，将上面下载的插件解压到这个目录下；
-* 在Sublime Text 中依次选择 Preferences ==> Package Settings ==> quick-community-dev ==> Setting-User，此时将自动创建一个文件，在文件中输入如下内容，并保存为 quick-comminuty-dev.sublime-settings：
-
-		{
-		    // must set the path
-		    "quick_cocos2dx_root": "此处填入引擎所在路径",
-		    // lua template attributes
-		    "date_format": "%Y-%m-%d %H:%M:%S",
-		    // i.e. peter or peter (peter@gmail.com)
-		    "author": "此处填入你的名字",
-		    // compile_scripts encrypt key,no encrypt when empty
-		    "compile_scripts_key": ""
-		} 
-`quick_cocos2dx_root`该key对应的value需要填写，例如：`test/frameworks/cocos2d-x`;		
-* 完成以上步骤，通过右键`Goto Definition`可以实现代码跳转；
 
 ####sublime启动模拟器
-* 完成代码跳转后， 打开 Sublime Text 中依次选择 Preferences ==> Browse Packages... ，此时将进入到Sublime Text的 Packages 目录下，打开quick-comminuty-dev-master文件夹中的`quickx.py`；
-* 跳转到方法`runWithPlayer`中，在`playerPath=""`下一行插入`arr=os.path.split(srcDir)`，然后将`elif sublime.platform()=="windows":`的下一行改为`playerPath=arr[0]+"/simulator/win32/test.exe"`，`test.exe`是新建工程通过visio studio生成的可执行文件；
-* 另外还需要将`width=640`改成`width="640"`，`height=960`改成`height="960"`；
-* 完成以上步骤，通过右键`Run With Player`可以启动模拟器，实现工程代码；
+* 通过右键`Run With Player`可以启动模拟器，实现工程代码；
+
+####sublime代码跳转
+* 选中某个变量，通过右键`Goto Definition`可以启动模拟器，实现工程代码；
+* 打开一个新的工程，必须要先使用`Run With Player`（这个方法可以确认工程目录路径）之后，才能使用` Goto Definition`；
 
 ####sublime配置快捷键
 * 在Sublime Text 中依次选择 Preferences ==> Package Settings ==> quick-community-dev ==> Key Bindings-User，此时将自动创建一个文件，在文件中输入如下内容，并保存：
