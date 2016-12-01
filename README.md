@@ -1,4 +1,10 @@
 # SomeNode
 some node in develop
 
-* [win+cocos+sublime](win+cocos+sublime/win+cocos+sublime.md)
+###cocos+sublime
+* [win+cocos+sublime](cocos+sublime/win+cocos+sublime.md)
+* [mac+cocos+sublime](cocos+sublime/win+cocos+sublime.md)
+
+###SmartSVN
+* [smartsvn](smartsvn/smartsvn.md)
+
